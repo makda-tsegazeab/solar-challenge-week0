@@ -1,4 +1,5 @@
 Solar Challenge Week 0: Solar Farm Analysis
+
 🌟 Project Overview
 This project analyzes solar radiation measurement data from Benin, Sierra Leone, and Togo to identify high-potential regions for solar energy investments. The analysis supports MoonLight Energy Solutions' strategic approach to enhance operational efficiency and sustainability through data-driven solar investment decisions.
 
