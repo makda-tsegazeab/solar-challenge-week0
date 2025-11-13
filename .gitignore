@@ -41,4 +41,5 @@ env/
 
 # OS
 .DS_Store
-Thumbs.db
+Thumbs.db# Analysis results
+results/
