@@ -1,0 +1,32 @@
+# Solar Challenge Pipeline Configuration
+
+data_settings:
+  raw_data_path: "data/"
+  clean_data_path: "data/"
+  countries: ["benin", "sierra_leone", "togo"]
+  
+cleaning_settings:
+  missing_value_strategy: "median"
+  outlier_threshold: 0.99
+  remove_duplicates: true
+  
+analysis_settings:
+  key_metrics: ["GHI", "DNI", "DHI", "Tamb", "RH", "WS"]
+  correlation_threshold: 0.7
+  significance_level: 0.05
+  
+ranking_settings:
+  weights:
+    GHI_Mean: 0.25
+    GHI_CV: -0.15
+    DNI_Mean: 0.20
+    High_Radiation_Days: 0.15
+    Avg_Temperature: 0.05
+    Avg_Humidity: -0.10
+    Optimal_Wind_Days: 0.08
+    Data_Quality_Score: 0.12
+
+output_settings:
+  results_path: "results/"
+  reports_path: "reports/"
+  figures_path: "figures/"
