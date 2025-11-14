@@ -1,27 +1,42 @@
 Solar Challenge Week 0: Solar Farm Analysis
-
 🌟 Project Overview
 This project analyzes solar radiation measurement data from Benin, Sierra Leone, and Togo to identify high-potential regions for solar energy investments. The analysis supports MoonLight Energy Solutions' strategic approach to enhance operational efficiency and sustainability through data-driven solar investment decisions.
 
-Business Objective
+🎯 Business Objective
 Develop a strategic approach to identify high-potential regions for solar installation that align with long-term sustainability goals, focusing on operational efficiency and targeted solar investments.
 
-📊 Dataset
-Source: Solar Radiation Measurement Data
+📊 Project Status: COMPLETED ✅
+Tasks Accomplished:
+✅ Task 1: Git & Environment Setup
+Repository initialization and CI/CD pipeline
 
-Countries: Benin, Sierra Leone, Togo
+Virtual environment setup with dependency management
 
-Key Metrics:
+Professional project structure establishment
 
-Solar Radiation: GHI, DNI, DHI
+Data privacy protocols implemented
 
-Environmental: Temperature, Humidity, Barometric Pressure
+✅ Task 2: Data Profiling, Cleaning & EDA
+Comprehensive exploratory data analysis for all three countries
 
-Wind: Speed, Direction, Gust
+Data quality assessment and cleaning pipelines
 
-Sensor Data: ModA, ModB, Cleaning Events
+Outlier detection and missing value treatment
 
-Timestamp: Temporal patterns and trends
+Time series analysis and correlation studies
+
+Environmental factor impact analysis
+
+✅ Task 3: Cross-Country Comparison
+Statistical comparison of solar potential across countries
+
+Side-by-side visualization of radiation metrics (GHI, DNI, DHI)
+
+Significance testing (ANOVA, Kruskal-Wallis)
+
+Country ranking based on multiple solar KPIs
+
+Strategic investment recommendations
 
 🚀 Quick Start
 Prerequisites
@@ -35,7 +50,7 @@ Installation
 Clone the Repository
 
 bash
-git clone https://github.com/your-username/solar-challenge-week0.git
+git clone https://github.com/makda-tsegazeab/solar-challenge-week0.git
 cd solar-challenge-week0
 Set Up Virtual Environment
 
@@ -66,8 +81,6 @@ sierra_leone_data.csv
 
 togo_data.csv
 
-Run EDA notebooks to generate cleaned datasets
-
 📁 Project Structure
 text
 solar-challenge-week0/
@@ -78,10 +91,10 @@ solar-challenge-week0/
 │   ├── *_data.csv             # Raw data files
 │   └── *_clean.csv            # Cleaned data files
 ├── notebooks/                  # Analysis notebooks
-│   ├── benin_eda.ipynb
-│   ├── sierra_leone_eda.ipynb
-│   ├── togo_eda.ipynb
-│   └── country_comparison.ipynb
+│   ├── benin_eda.ipynb        # Benin exploratory analysis
+│   ├── sierra_leone_eda.ipynb # Sierra Leone analysis
+│   ├── togo_eda.ipynb         # Togo analysis
+│   └── compare_countries.ipynb # Cross-country comparison
 ├── scripts/                    # Utility scripts
 │   ├── verify_setup.py
 │   └── __init__.py
@@ -90,173 +103,39 @@ solar-challenge-week0/
 ├── .gitignore                  # Git exclusion rules
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
-🛠️ Development Workflow
-Branch Strategy
-main - Production-ready code
-
-setup-task - Environment setup tasks
-
-eda-<country> - Country-specific EDA branches
-
-feature/* - New feature development
-
-Commit Convention
-feat: New features
-
-fix: Bug fixes
-
-docs: Documentation
-
-chore: Maintenance tasks
-
-ci: CI/CD changes
-
-Running Analysis
-Exploratory Data Analysis
+🔬 Analysis Workflow
+1. Exploratory Data Analysis
+Run the country-specific notebooks to understand solar patterns:
 
 bash
-# Start Jupyter
-jupyter notebook
-# Open and run country-specific EDA notebooks
-Generate Cleaned Data
+jupyter notebook notebooks/benin_eda.ipynb
+jupyter notebook notebooks/sierra_leone_eda.ipynb  
+jupyter notebook notebooks/togo_eda.ipynb
+2. Cross-Country Comparison
+Execute the comparative analysis:
 
-Run EDA notebooks to automatically export cleaned datasets
+bash
+jupyter notebook notebooks/compare_countries.ipynb
+3. Key Findings
+Data Quality: Comprehensive cleaning and validation performed
 
-Cleaned data saved as data/[country]_clean.csv
+Solar Patterns: Diurnal and seasonal variations analyzed
 
-📈 Analysis Components
-Completed EDA Tasks
-1. Data Profiling & Cleaning
-Summary statistics and missing value analysis
+Environmental Impact: Temperature, humidity, wind effects assessed
 
-Outlier detection using Z-scores (|Z| > 3 threshold)
+Country Ranking: Statistical comparison completed
 
-Median imputation for missing values
+📈 Key Results & Insights
+Country Ranking by Solar Potential:
+🥇 Benin - Highest solar radiation levels
 
-Data quality assessment and reporting
+🥈 Sierra Leone - Most consistent radiation patterns
 
-2. Time Series Analysis
-GHI, DNI, DHI, Tamb patterns over time
+🥉 Togo - Good potential with specific opportunities
 
-Seasonal and diurnal variation analysis
+Statistical Significance:
+Significant differences found between countries (p < 0.05)
 
-Anomaly detection in solar irradiance
+Benin demonstrates superior solar potential
 
-3. Correlation Analysis
-Heatmaps of solar parameter correlations
-
-Wind speed/direction vs. radiation relationships
-
-Temperature-humidity interactions
-
-4. Environmental Impact Analysis
-Cleaning event impact on sensor performance
-
-Wind distribution and patterns
-
-Bubble charts: GHI vs. Temperature with Humidity sizing
-
-5. Statistical Validation
-Distribution analysis
-
-Significance testing
-
-Data quality metrics
-
-🔧 Technical Specifications
-Dependencies
-txt
-pandas>=1.5.0
-numpy>=1.21.0
-jupyter>=1.0.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-scikit-learn>=1.0.0
-black>=22.0.0
-pytest>=7.0.0
-Data Privacy
-All data files excluded from version control via .gitignore
-
-Raw and processed data stored locally in data/ directory
-
-Analysis code and methods fully transparent and reproducible
-
-Quality Assurance
-GitHub Actions CI/CD pipeline
-
-Automated dependency installation
-
-Import validation
-
-Code formatting with Black
-
-🎯 Key Insights & Applications
-Solar Potential Assessment
-Identification of optimal regions based on GHI patterns
-
-Seasonal variability analysis for capacity planning
-
-Environmental factor impact on energy generation
-
-Operational Efficiency
-Sensor performance monitoring through cleaning impact analysis
-
-Weather pattern understanding for maintenance scheduling
-
-Data-driven decision support for investment strategies
-
-Sustainability Alignment
-Regional comparison for strategic placement
-
-Long-term trend analysis for sustainability planning
-
-Risk assessment through environmental factor analysis
-
-🤝 Contributing
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'feat: Add AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-Development Standards
-Follow PEP 8 coding standards
-
-Use descriptive commit messages
-
-Document new features thoroughly
-
-Add tests for new functionality
-
-📝 License
-This project is part of the 10 Academy Solar Challenge training program.
-
-🆘 Support
-For questions or issues:
-
-Check existing documentation
-
-Review closed GitHub issues
-
-Contact the project maintainers
-
-Reach out to 10 Academy community
-
-📊 Status
-Completed Tasks ✅
-Task 1: Git & Environment Setup
-
-Task 2: Data Profiling, Cleaning & EDA for all three countries
-
-Ready for Next Phase 🚀
-Cleaned datasets for Benin, Sierra Leone, and Togo
-
-Comprehensive EDA notebooks
-
-Statistical baseline established
-
-Infrastructure for comparative analysis
+Environmental factors manageable across all
